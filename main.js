@@ -77,7 +77,7 @@ phina.define("MainScene", {
                 this.exit({
                     backgroundColor: "#9400d3",
                     score: this.point,
-                    message: 'ゲームオーバー'
+                    message: '飛んで飛んで飛んで飛んで飛んで'
                 });
             }
             if (enemy.y < 0) {
