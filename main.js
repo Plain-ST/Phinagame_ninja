@@ -69,7 +69,6 @@ phina.define("MainScene", {
             Enemy().setPosition(SCREEN_WIDTH / 2 + position * 70, SCREEN_HEIGHT).addChildTo(this.enemyGroup);
             position = Math.randint(-3, 3);
             Enemy().setPosition(SCREEN_WIDTH / 2 + position * 70, SCREEN_HEIGHT).addChildTo(this.enemyGroup);
-            position = Math.randint(-3, 3);
         }
         this.enemyGroup.children.each((enemy) => {
             enemy.y = enemy.y - this.enemyspeed;
