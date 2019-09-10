@@ -75,6 +75,7 @@ phina.define("MainScene", {
             enemy.y = enemy.y - this.enemyspeed;
             if (enemy.hitTestElement(this.player)) {
                 this.exit({
+                    backgroundColor: "#9400d3",
                     score: this.point,
                     message: 'ゲームオーバー'
                 });
