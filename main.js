@@ -82,7 +82,7 @@ phina.define("MainScene", {
             if (enemy.y < 0) {
                 enemy.remove();
                 this.enemyspeed = this.enemyspeed + 0.1;
-                this.point = this.point + 4;
+                this.point = this.point + 5;
             }
         })
         this.time++;
