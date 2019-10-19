@@ -60,7 +60,7 @@ phina.define("MainScene", {
         this.point = 0;
     },
     update() {
-        if (this.time % 10 === 0) {
+        if (this.time % 150 === 0) {
             let position = Math.randint(-3, 3);
             Enemy().setPosition(SCREEN_WIDTH / 2 + position * 70, SCREEN_HEIGHT).addChildTo(this.enemyGroup);
             position = Math.randint(-3, 3);
