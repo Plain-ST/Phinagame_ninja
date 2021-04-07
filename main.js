@@ -58,9 +58,10 @@ phina.define("MainScene", {
         this.time = 0;
         this.enemyspeed = 5;
         this.point = 0;
+        this.coment = "";
     },
     update() {
-        if (this.time % 80 === 0) {
+        if (this.time % 150 === 0) {
             let position = Math.randint(-3, 3);
             Enemy().setPosition(SCREEN_WIDTH / 2 + position * 70, SCREEN_HEIGHT).addChildTo(this.enemyGroup);
             position = Math.randint(-3, 3);
@@ -76,13 +77,22 @@ phina.define("MainScene", {
                 this.exit({
                     backgroundColor: "#9400d3",
                     score: this.point,
-                    message: 'まだまだ飛べるはず'
+                    message: this.coment
                 });
             }
             if (enemy.y < 0) {
                 enemy.remove();
-                this.enemyspeed = this.enemyspeed + 0.15;
+                this.enemyspeed = this.enemyspeed + 0.05;
                 this.point = this.point + 5;
+                if(this.point<100){
+                  this.coment = "まだまだ飛べるはず"
+                }else if(this.point<200){
+                  this.coment = "忍法鼫の術"
+                }else if(this.point<300){
+                  this.coment = "I can fly!!"
+                }else{
+                  this.coment = "ニンジャナンデ!!"
+                }
             }
         })
         this.time++;
